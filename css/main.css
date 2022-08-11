@@ -8,6 +8,36 @@
   /* --main-line-height : 1.5; */
 }
 
+
+/* dm-serif-display-regular - latin */
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  src: 
+  url("../fonts/dm-serif-display-v10-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/dm-serif-display-v10-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* karla-regular - latin */
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  src:
+  url("../fonts/karla-v23-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/karla-v23-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* karla-700 - latin */
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  src:
+  url("../fonts/karla-v23-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/karla-v23-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* GENERAL */
 *,
 *::before,
@@ -46,10 +76,9 @@ body{
   height: 100%;
   margin: 0;
   padding: 0;
-  /* font-family: "Roboto", "Arial", sans-serif; */
-  /* font-size: 16px; */
-  /* font-weight: 400; */
-  /* line-height: var(--main-line-height); */
+  font-family: "DM Serif Display", serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 
@@ -70,7 +99,7 @@ body{
 
 .container{
   width: 100%;
-  /* max-width: your-size-here; */
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -80,4 +109,187 @@ body{
   flex-grow: 1;
 }
 
+
+/* Insure styles started */
+.site-header__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 31px 0;
+}
+
+.site-header__nav{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.site-header__list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+
+.site-header__item{
+  margin-right: 25px;
+}
+
+.site-header__item:last-child{
+  margin-right: 33px;
+}
+
+.site-header__link{
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #837D88;
+}
+
+.site-header__button{
+  width: 100%;
+  padding: 13px 28px;
+  background: #FFFFFF;
+  border: 1.5px solid #2C2830;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #2C2830;
+}
+
+.site-header__hamburger{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px){
+  .site-header{
+    position: relative;
+  }
+  
+  .site-header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 31px 0;
+  }
+  
+  .site-header__nav{
+    display: none;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 62px);
+    background-image: url("../images/menu-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: hamburger 1s ease;
+  }
+  
+  .site-header--active .site-header__nav{
+    display: block;
+  }
+
+  .site-header__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding-top: 40px;
+  }
+  
+  .site-header__item{
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  
+  .site-header__item:last-child{
+    margin-right: 0;
+  }
+  
+  .site-header__link{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 1.36364px;
+    color: #FFFFFF;
+  }
+
+  .site-header__button-wrapper{
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+    
+  .site-header__button{
+    width: 80%;
+    padding: 13px 28px;
+    background: #2C2830;
+    border: 1.5px solid #fff;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 1.36364px;
+    color: #FFFFFF;
+  }
+  
+  .site-header__hamburger{
+    display: block;
+    background-image: url("../images/hamburger-open.svg");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .site-header--active .site-header__hamburger{
+    background-image: url("../images/hamburger-close.svg");
+  }
+
+}
+
+
+
+@keyframes hamburger {
+  0%{
+    top: -10%;
+  }
+  100%{
+    top: 100%;
+  }
+}
+
+/* Insure styles ended */
 
