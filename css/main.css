@@ -829,7 +829,7 @@ body{
 @media only screen and (max-width: 768px){
   
   .site-header{
-    position: relative;
+    position: fixed;
   }
   
   .site-header__wrapper{
@@ -927,7 +927,7 @@ body{
   
   .hero{
     width: 100%;
-    padding-top: 0;
+    padding-top: 60px;
     padding-bottom: 93px;
     background-color: #2C2830;
     background-image: none;
