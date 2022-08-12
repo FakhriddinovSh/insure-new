@@ -1,11 +1,1 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 2">
-<rect id="Rectangle" x="0.75" y="0.75" width="30.5" height="30.5" fill="white" stroke="#2C2830" stroke-width="1.5"/>
-<g id="Group">
-<g id="Group 3">
-<rect id="Rectangle Copy 2" x="10.8735" y="9.56287" width="16" height="1.5" transform="rotate(45 10.8735 9.56287)" fill="#2C2830"/>
-<rect id="Rectangle Copy 3" x="9.81299" y="20.8765" width="16" height="1.5" transform="rotate(-45 9.81299 20.8765)" fill="#2C2830"/>
-</g>
-</g>
-</g>
-</svg>
+<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" stroke="#2C2830" stroke-width="1.5" d="M.75.75h30.5v30.5H.75z"/><g fill="#2C2830"><path d="m10.873 9.563 11.314 11.313-1.06 1.061L9.811 10.623z"/><path d="M9.813 20.877 21.127 9.563l1.06 1.06-11.313 11.315z"/></g></svg>
